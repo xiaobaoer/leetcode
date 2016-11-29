@@ -1,0 +1,5 @@
+一、如何在java中做reverse
+String s="12345";
+StringBuilder sb =new StringBuilder(s);
+s = sb.reverse().toString();
+System.out.println(s);
