@@ -1,5 +1,8 @@
-一、如何做reverse在JAVA的程序里
+﻿一、如何做reverse在JAVA的程序里
 String s="12345";
 StringBuilder sb =new StringBuilder(s);
 s = sb.reverse().toString();
 System.out.println(s);
+二、java中的异或运算（^）
+   java中的异或运算都是以二进制数据为基础进行的运算，也就是说当代码中使用异或运算时，都会先将两个条件进行转换，转换成二进制数据后再运算。
+   所以在java中，0与任何一个数异或，得到的都是数本身。（因为数先转换成二进制再进行异或）。
