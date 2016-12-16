@@ -1,0 +1,22 @@
+Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, where a move is incrementing n - 1 elements by 1.
+
+思路：将n-1个元素加1与最大的减1是等效果的。
+
+CODE：
+
+public class Solution {
+    public int minMoves(int[] nums) {
+       
+        int min=Integer.MAX_VALUE;
+        for (int x:nums){
+            if(x<min){
+                min=x;
+            }
+        }
+         int count=0;
+        for (int x:nums){
+            count+=x-min;
+        }
+     return count;   
+    }
+}
