@@ -1,0 +1,33 @@
+Find the sum of all left leaves in a given binary tree.
+计算所有左子叶的和。
+采用递归算法。
+
+CODE:
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int sumOfLeftLeaves(TreeNode root,Boolean isleft) {
+        if(root==null){
+            return 0;
+        }
+        int res=0;
+        if (root.left!=null || root.right!=null){
+            res+=sumOfLeftLeaves(root.left,true);
+            res+=sumOfLeftLeaves(root.right,false);
+        }else if(isleft){
+            res+=root.val;
+        }
+        return res;
+    }
+    public int sumOfLeftLeaves(TreeNode root) {
+    return sumOfLeftLeaves(root, false);
+}
+}
