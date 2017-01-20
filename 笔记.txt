@@ -54,4 +54,8 @@ public Object put(Object Key,Object value)方法用来将元素添加到map中�
 
 十一、只有类中非静态变量有this.
 
+十二、Java中有两种传递方式：值传递和引用传递。
+ 基本类型和以(String str = "aaa")这种方式创建的字符串都是值传递；
+ 对象、数组等都是引用传递。
+
 
